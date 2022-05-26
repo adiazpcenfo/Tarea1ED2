@@ -93,7 +93,7 @@ public:
 	}
 
 	bool agregar(int _dato)
-	{
+	{ //Inserta de manera ordenada y no agrega si el dato ya existe.
 		bool agregado = false;
 		if (esVacia()) {
 			setCab(new Nodo(_dato));

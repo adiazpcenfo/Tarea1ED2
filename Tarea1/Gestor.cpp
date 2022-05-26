@@ -41,7 +41,7 @@ public:
 
     void pasarDePilaALista(){
         if(!pila->empty()){
-           lista->agregarFinal(pila->pop());
+           lista->agregar(pila->pop());
         }
     }
 
@@ -52,7 +52,7 @@ public:
     }
     void pasarDeColaALista(){
         if(!cola->esVacia()){
-           lista->agregarFinal(cola->desencolar());
+           lista->agregar(cola->desencolar());
         }
     }
 };
