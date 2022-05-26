@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include "Nodo.cpp"
-
+#pragma once
 using namespace std;
 
 class Lista {

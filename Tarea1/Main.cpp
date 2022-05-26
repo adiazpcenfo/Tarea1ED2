@@ -5,12 +5,16 @@
 #include "Pila.cpp"
 #include "Cola.cpp"
 #include "Lista.cpp"
+#include "Gestor.cpp"
+
 using namespace std;
 
 
 Lista* lista = new Lista();
 Cola* cola = new Cola();
 Pila* pila = new Pila();
+
+Gestor* gestor = new Gestor(cola,lista,pila);
 
 void menu() {
     int opc = 0;
@@ -22,6 +26,7 @@ void menu() {
         cout << "(4) Desplegar lista ordenada" << endl;
         cout << "(5) Desplegar pila" << endl;
         cout << "(6) Desplegar cola" << endl;
+        cout << "(7) De Lista a cola" << endl;
         cout << "(0) Salir del programa" << endl;
         cout << "_____________________________________________________________________" << endl;
         cout << "Opcion Seleccionada-> "; cin >> opc;
@@ -72,6 +77,16 @@ void menu() {
             case 6: {
                 cout << "Desplegando cola:" << endl;
                 cola->desplegar();
+                break;
+            }
+            case 7: {
+                cout << "De lista a cola:" << endl;
+                int num;
+                cout << "Ingrese el numero a mover:" << endl;
+                cin >> num;
+                gestor->pasarDeListaACola(num);
+                cout << "Agregado correctamente." << endl;
+
                 break;
             }
             default:{

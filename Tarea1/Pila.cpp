@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include "NodoP.cpp"
-
+#pragma once
 using namespace std;
 
 class Pila {

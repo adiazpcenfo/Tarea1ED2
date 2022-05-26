@@ -1,14 +1,16 @@
 #include <iostream>
 #include <stdlib.h>
+#pragma once
 using namespace std;
 
 class Nodo {
+
 protected:
 	int dato;
 	Nodo* sgte;
 
 public:
-	Nodo(int _dato) {
+	explicit Nodo(int _dato) {
 		this->dato = _dato;
 		this->sgte = NULL;
 	}
@@ -29,3 +31,4 @@ public:
 		this->sgte = _sgte;
 	}
 };
+

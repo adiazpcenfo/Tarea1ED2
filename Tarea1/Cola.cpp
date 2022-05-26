@@ -1,7 +1,8 @@
 
 #include <iostream>
-#include <stdlib.h>
+
 #include "NodoC.cpp"
+#pragma once
 
 using namespace std;
 

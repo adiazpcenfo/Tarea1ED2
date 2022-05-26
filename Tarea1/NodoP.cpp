@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
+#pragma once
 using namespace std;
 
 class NodoP{
