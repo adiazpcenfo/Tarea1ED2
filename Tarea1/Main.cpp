@@ -26,7 +26,12 @@ void menu() {
         cout << "(4) Desplegar lista ordenada" << endl;
         cout << "(5) Desplegar pila" << endl;
         cout << "(6) Desplegar cola" << endl;
-        cout << "(7) De Lista a cola" << endl;
+        cout << "(7) Pasar de Lista a cola" << endl;
+        cout << "(8) Pasar de Lista a pila" << endl;
+        cout << "(9) Pasar de Pila a cola" << endl;
+        cout << "(10) Pasar de Pila a lista" << endl;
+        cout << "(11) Pasar de Cola a Pila" << endl;
+        cout << "(12) Pasar de Cola a lista" << endl;
         cout << "(0) Salir del programa" << endl;
         cout << "_____________________________________________________________________" << endl;
         cout << "Opcion Seleccionada-> "; cin >> opc;
@@ -85,6 +90,48 @@ void menu() {
                 cout << "Ingrese el numero a mover:" << endl;
                 cin >> num;
                 gestor->pasarDeListaACola(num);
+                cout << "Agregado correctamente." << endl;
+
+                break;
+            }
+            case 8: {
+                cout << "De lista a pila:" << endl;
+                int num;
+                cout << "Ingrese el numero a mover:" << endl;
+                cin >> num;
+                gestor->pasarDeListaAPila(num);
+                cout << "Agregado correctamente." << endl;
+
+                break;
+            }
+            case 9: {
+                cout << "De pila a cola:" << endl;
+
+                gestor->pasarDePilaACola();
+                cout << "Agregado correctamente." << endl;
+
+                break;
+            }
+            case 10: {
+                cout << "De pila a lista:" << endl;
+
+                gestor->pasarDePilaALista();
+                cout << "Agregado correctamente." << endl;
+
+                break;
+            }
+            case 11: {
+                cout << "De cola a pila:" << endl;
+
+                gestor->pasarDeColaAPila();
+                cout << "Agregado correctamente." << endl;
+
+                break;
+            }
+            case 12: {
+                cout << "De cola a lista:" << endl;
+
+                gestor->pasarDeColaALista();
                 cout << "Agregado correctamente." << endl;
 
                 break;

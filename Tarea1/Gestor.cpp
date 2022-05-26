@@ -27,7 +27,34 @@ public:
         }
     }
 
+    void pasarDeListaAPila(int x){
+        if(!lista->esVacia() && lista->dirNodo(x) != nullptr){
+            pila->push(x);
+        }
+    }
 
+    void pasarDePilaACola(){
+        if(!pila->empty()){
+            cola->encolar(pila->pop());
+        }
+    }
+
+    void pasarDePilaALista(){
+        if(!pila->empty()){
+           lista->agregarFinal(pila->pop());
+        }
+    }
+
+    void pasarDeColaAPila(){
+        if(!cola->esVacia()){
+            pila->push(cola->desencolar());
+        }
+    }
+    void pasarDeColaALista(){
+        if(!cola->esVacia()){
+           lista->agregarFinal(cola->desencolar());
+        }
+    }
 };
 
 
