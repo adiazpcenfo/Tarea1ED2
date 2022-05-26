@@ -1,12 +1,12 @@
 #include <iostream>
 #include <stdlib.h>
-#include "NodoP.cpp"
+#include "Nodo.cpp"
 #pragma once
 using namespace std;
 
 class Pila {
 protected:
-	NodoP* pTope;
+	Nodo* pTope;
 	int largo;
 
 public:
@@ -25,17 +25,17 @@ public:
 		return this->largo;
 	}
 
-	void setpTope(NodoP* _pTope) {
+	void setpTope(Nodo* _pTope) {
 		this->pTope = _pTope;
 	}
 
-	NodoP* getpTope() {
+	Nodo* getpTope() {
 		return this->pTope;
 	}
 
 	// Agregar un elemento a la pila
 	void push(int _info) {
-		NodoP* nuevo = new NodoP(_info);
+		Nodo* nuevo = new Nodo(_info);
 
 		nuevo->setSgte(pTope);
 		setpTope(nuevo);
@@ -54,7 +54,7 @@ public:
 
 			info = getpTope()->getDato();
 
-			NodoP* aux = getpTope();
+			Nodo* aux = getpTope();
 			setpTope(aux->getSgte());
 
 			delete aux;
@@ -84,7 +84,7 @@ public:
 			cout << "La pila esta vacia" << endl;
 		}
 		else {
-			NodoP* aux = pTope;
+			Nodo* aux = pTope;
 			while (aux != NULL) {
 				cout << aux->getDato() << endl;
 				aux = aux->getSgte();

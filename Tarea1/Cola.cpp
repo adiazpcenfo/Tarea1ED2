@@ -1,24 +1,24 @@
 
 #include <iostream>
 
-#include "NodoC.cpp"
+#include "Nodo.cpp"
 #pragma once
 
 using namespace std;
 
 class Cola {
 protected:
-	NodoC* pFrente;
-	NodoC* pFinal;
+	Nodo* pFrente;
+	Nodo* pFinal;
 	int largoC;
 
 public:
-	NodoC* getPFrente()
+	Nodo* getPFrente()
 	{
 		return this->pFrente;
 	}
 
-	NodoC* getPFinal()
+	Nodo* getPFinal()
 	{
 		return this->pFinal;
 	}
@@ -28,12 +28,12 @@ public:
 		return this->largoC;
 	}
 
-	void setPFrente(NodoC* _dato)
+	void setPFrente(Nodo* _dato)
 	{
 		this->pFrente = _dato;
 	}
 
-	void setPFinal(NodoC* _dato)
+	void setPFinal(Nodo* _dato)
 	{
 		this->pFinal = _dato;
 	}
@@ -64,7 +64,7 @@ public:
 	{
 		int dato = 0;
 		if (!esVacia()) {
-			NodoC* aux = this->pFrente;
+			Nodo* aux = this->pFrente;
 			pFrente = pFrente->getSgte();
 
 			dato = aux->getDato();
@@ -81,7 +81,7 @@ public:
 
 	void encolar(int _dato)
 	{
-		NodoC* nuevo = new NodoC(_dato);
+		Nodo* nuevo = new Nodo(_dato);
 		if (esVacia()) {
 			setPFrente(nuevo);
 			setPFinal(nuevo);
@@ -114,7 +114,7 @@ public:
 
 	void desplegar()
 	{
-		NodoC* aux = getPFrente();
+		Nodo* aux = getPFrente();
 		while (aux != NULL) {
 			cout << aux->getDato() << "-";
 			aux = aux->getSgte();
